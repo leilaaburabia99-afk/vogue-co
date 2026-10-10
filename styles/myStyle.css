@@ -1,0 +1,1036 @@
+﻿
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #000000;
+    border-bottom: 1px solid #333333;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-decoration: none 
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    color: #ffffff;
+    text-decoration: none; /* תיקון: הוספת נקודה-פסיק */
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:active,
+.nav-menu li a.active {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.nav-menu li.dropdown-parent {
+    position: relative;
+}
+
+.nav-menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000000;
+    border: 1px solid #333333;
+    min-width: 180px;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    flex-direction: column;
+    gap: 0;
+}
+
+.nav-menu .dropdown-menu li {
+    width: 100%;
+}
+
+.nav-menu .dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-menu .dropdown-menu li a:hover {
+    background-color: #222222;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-menu li.dropdown-parent:hover .dropdown-menu {
+    display: flex;
+}
+
+.beige-footer {
+    background-color: #ffecd2;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-top: 1px solid #ddd;
+}
+
+body.home-page {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.home-page .hero-container,
+body.home-page main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ddd;
+    margin-bottom: 2.5rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+
+.about-content-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px 20px 50px 20px;
+    text-align: right;
+    width: 100%;
+}
+
+.about-content-wrapper > nav.breadcrumbs {
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+.breadcrumbs a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.about-content-wrapper > h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.about-content-wrapper h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.about-content-wrapper section,
+.about-content-wrapper article {
+    margin-bottom: 45px;
+}
+
+.about-content-wrapper > p {
+    color: #ffffff;
+    line-height: 2.2;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.credits-box {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.credits-box p + p {
+    margin-top: 5px;
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+.hit-logo-small {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 12px auto;
+}
+
+.hit-section {
+    text-align: center;
+}
+
+.hit-link {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+.hit-link:hover {
+    color: #cccccc;
+}
+
+.about-content-wrapper a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+
+body.contact-page {
+    
+    background: url('../Images/contact.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.contact-content-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: right;
+    width: 100%;
+}
+
+.contact-content-wrapper > nav.breadcrumbs {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+.contact-content-wrapper > h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    border-radius: 4px;
+    outline: none;
+    direction: rtl;
+    text-align: right;
+    width: 100%;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #cccccc;
+}
+
+.submit-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.submit-btn:hover {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    
+}
+
+.sitemap-container {
+    max-width: 800px;
+    margin: 40px auto; 
+    padding: 0 20px;
+    direction: rtl;
+    text-align: right; 
+}
+
+
+.sitemap-content-box {
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+}
+
+.sitemap-container h1,
+.sitemap-container h2,
+.sitemap-container p {
+    text-align: right;
+}
+
+.sitemap-list {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-right: 25px;
+    margin-right: 0;
+    text-align: right;
+    line-height: 2.3;
+}
+
+.sitemap-list li {
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.sitemap-list a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.sitemap-sublist {
+    list-style-type: circle;
+    list-style-position: outside;
+    padding-right: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+.skateBody {
+    background-color: black;
+}
+
+
+
+.skatePage {
+    direction: rtl;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+}
+
+
+
+.hero {
+    padding: 40px;
+}
+
+.hero .nameStyle {
+    color: yellow;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero .aboutStyle {
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.heroVideo {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.heroVideo iframe {
+    width: 800px;
+    height: 450px;
+    border: none;
+}
+
+
+
+.skateLine {
+    width: 1000px;
+    height: 100px;
+    margin: 30px auto 50px auto;
+    position: relative;
+}
+
+.skateLine img {
+    width: 120px;
+    position: absolute;
+    top: 0;
+    left: 440px;
+}
+
+.yellowLine {
+    width: 1000px;
+    height: 4px;
+    background-color: yellow;
+    position: absolute;
+    top: 45px;
+    left: 0;
+}
+
+
+
+.historySB {
+    padding: 30px;
+}
+
+.historySB h2 {
+    color: yellow;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+
+
+.historyPeriod {
+    background-color: black;
+    color: white;
+    padding: 25px;
+    margin-bottom: 80px;
+    border-right: 6px solid yellow;
+    height: 300px;
+    
+}
+.historyPeriod:nth-child(odd) {
+    border-right-color: yellow;
+}
+
+.historyPeriod:nth-child(even) {
+    border-right-color: #a68b5b;
+}
+.historyPeriod h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.historyPeriod p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.historyText {
+    width: 580px;
+    float: right;
+}
+
+
+
+.historyMedia {
+    width: 450px;
+    float: left;
+}
+
+.historyMedia img {
+    width: 450px;
+}
+
+.historyMedia iframe {
+    width: 450px;
+    height: 253px;
+    border: none;
+}
+
+
+
+.skateClothes {
+    padding: 30px;
+}
+
+.skateClothes h2 {
+    color: yellow;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+
+
+.clothesItem {
+    width: 500px;
+    height: 360px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-bottom: 55px;
+
+    display: inline-block;
+    vertical-align: top;
+
+    border-bottom: 4px solid yellow;
+}
+
+
+
+.clothesText {
+    width: 500px;
+    height: 125px;
+    text-align: center;
+}
+
+.clothesText h3 {
+    color: yellow;
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.clothesText p {
+    color: white;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+
+
+.clothesMedia {
+    width: 500px;
+    height: 180px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+.vansImage {
+    width: 200px;
+}
+
+.shirtImage {
+    width: 190px;
+}
+
+.jeansImage {
+    width: 105px;
+}
+
+.capImage {
+    width: 165px;
+}
+
+
+
+.runwaySection {
+    padding: 40px 30px 70px 30px;
+    text-align: center;
+}
+
+.runwaySection h2 {
+    color: yellow;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.runwayIntro {
+    width: 850px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.runwayStage {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.runwayEvolution {
+    width: 1000px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.brandsSection {
+    padding: 40px 30px 70px 30px;
+}
+
+.brandsSection h2 {
+    color: yellow;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+
+.brandItem {
+    width: 500px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+
+    display: inline-block;
+    vertical-align: top;
+
+    border-bottom: 4px solid yellow;
+}
+
+
+.brandImage {
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.brandImage img {
+    height: 280px;
+}
+
+.vansBrandImage {
+    height: 240px;
+}
+
+
+
+.brandText {
+    width: 500px;
+    text-align: center;
+}
+
+.brandText h3 {
+    color: yellow;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.brandText p {
+    color: white;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+
+.oldMoneyBody {
+    background-color: #eee8dc;
+}
+
+
+
+.oldMoneyPage {
+    direction: rtl;
+    width: 1200px;
+    margin: 0 auto;
+
+    background-color: #eee8dc;
+    color: #243126;
+
+    font-family: Georgia, serif;
+}
+
+
+
+.oldMoneyHero {
+    padding: 50px 40px 70px 40px;
+    text-align: center;
+}
+
+.oldMoneyTitle {
+    color: #243126;
+    font-size: 58px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.oldMoneyIntro {
+    width: 820px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    line-height: 1.6;
+
+    color: #4b4a42;
+}
+
+.oldMoneyHeroVideo {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.oldMoneyHeroVideo iframe {
+    width: 900px;
+    height: 506px;
+    border: none;
+}
+
+
+
+.oldMoneyHistory {
+    padding: 40px;
+}
+
+.oldMoneyHistory h2 {
+    color: #243126;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.oldMoneyPeriod {
+    height: 290px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    border-right: 5px solid #a68b5b;
+}
+
+
+
+.oldMoneyHistoryText {
+    width: 570px;
+    float: right;
+}
+
+.oldMoneyHistoryText h3 {
+    color: #243126;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.oldMoneyHistoryText p {
+    color: #4b4a42;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+
+.oldMoneyHistoryMedia {
+    width: 450px;
+    height: 280px;
+
+    float: left;
+
+    text-align: center;
+}
+
+.oldMoneyHistoryMedia img {
+    height: 280px;
+}
+
+
+
+.oldMoneyClothes {
+    padding: 40px;
+    text-align: center;
+}
+
+.oldMoneyClothes h2 {
+    color: #243126;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+
+
+.oldMoneyItem {
+    width: 480px;
+    height: 370px;
+
+    padding: 20px;
+
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+
+    display: inline-block;
+    vertical-align: top;
+
+    background-color: #f7f3ea;
+    border-bottom: 4px solid #a68b5b;
+}
+
+
+.oldMoneyItemText {
+    width: 480px;
+    height: 135px;
+
+    text-align: center;
+}
+
+.oldMoneyItemText h3 {
+    color: #243126;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.oldMoneyItemText p {
+    color: #4b4a42;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+
+.oldMoneyItemMedia {
+    width: 480px;
+    height: 190px;
+
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+
+
+.oldMoneyShirt {
+    height: 170px;
+}
+
+.oldMoneyPants {
+    height: 185px;
+}
+
+.oldMoneySweater {
+    height: 175px;
+}
+
+.oldMoneyShoes {
+    height: 155px;
+}
+
+.oldMoneyEstate {
+    width: 330px;
+}
+
+
+.oldMoneyModern {
+    padding: 50px 40px 70px 40px;
+
+    text-align: center;
+
+    clear: both;
+}
+
+.oldMoneyModern h2 {
+    color: #243126;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.oldMoneyModernText {
+    width: 850px;
+
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    color: #4b4a42;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.oldMoneyModernMedia {
+    width: 420px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.oldMoneyModernMedia img {
+    width: 420px;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border-top: 5px solid #a68b5b;
+    border-bottom: 5px solid #a68b5b;
+}
+
+
+
+
+.oldMoneyBrands {
+    padding: 50px 40px 70px 40px;
+
+    text-align: center;
+}
+
+.oldMoneyBrands h2 {
+    color: #243126;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+
+
+.oldMoneyBrand {
+    width: 480px;
+
+    padding: 20px;
+
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 45px;
+
+    display: inline-block;
+    vertical-align: top;
+
+    background-color: #f7f3ea;
+
+    border-bottom: 4px solid #a68b5b;
+}
+
+
+
+.oldMoneyBrandImage {
+    width: 480px;
+    height: 280px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.oldMoneyBrandImage img {
+    height: 260px;
+}
+
+
+
+.oldMoneyBrandText {
+    width: 480px;
+
+    text-align: center;
+}
+
+.oldMoneyBrandText h3 {
+    color: #243126;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.oldMoneyBrandText p {
+    color: #4b4a42;
+    font-size: 17px;
+    line-height: 1.5;
+}
