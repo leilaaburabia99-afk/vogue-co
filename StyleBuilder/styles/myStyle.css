@@ -1,0 +1,221 @@
+﻿/* עיצוב כללי של העמוד */
+body {
+    direction: rtl;
+    margin: 0;
+    padding: 20px;
+    background-color: #fffbe8;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+/* המיכל הראשי */
+#container {
+    width: 1100px;
+    margin: auto;
+}
+
+/* כותרת האתר */
+header {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* מבנה העמוד */
+main {
+    width: 1100px;
+    overflow: hidden;
+}
+
+/* אזור הבחירה בצד ימין */
+#formPanel {
+    float: right;
+    width: 350px;
+}
+
+/* אזור התמונות בצד שמאל */
+#previewPanel {
+    float: left;
+    width: 650px;
+    background-color: white;
+    border: 1px solid #999999;
+}
+
+/* כותרות */
+h2 {
+    background-color: #444444;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* תיבות הבחירה */
+#boardChoice,
+#clothesChoice,
+#shoesChoice,
+#accessoriesChoice {
+    background-color: white;
+    border: 1px solid #999999;
+    padding: 12px;
+}
+
+/* אפשרויות הבחירה */
+#boardChoice label,
+#clothesChoice label,
+#shoesChoice label,
+#accessoriesChoice label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* תיבת השם */
+#userName {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+/* כפתור האישור */
+#confirmButton {
+    margin-top: 20px;
+    padding: 7px 20px;
+    background-color: #444444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* מראה הכפתור כאשר הוא אינו פעיל */
+#confirmButton:disabled {
+    background-color: #aaaaaa;
+    cursor: not-allowed;
+}
+
+/* אזורי התמונות */
+#boardsArea,
+#clothesArea,
+#shoesArea,
+#accessoriesArea {
+    padding: 12px;
+    border-bottom: 1px solid #999999;
+}
+
+/* אזור תמונות הסקייטבורדים */
+#boardsImages {
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* תמונות הסקייטבורדים מוסתרות לפני בחירה */
+#boardsImages img {
+    position: absolute;
+    visibility: hidden;
+    height: 210px;
+    width: auto;
+    top: 10px;
+}
+
+/* מיקום שני הסקייטבורדים */
+#catBoardImage {
+    right: 200px;
+}
+
+#hauntedBoardImage {
+    right: 270px;
+}
+
+/* אזור תמונות הבגדים */
+#clothesImages {
+    overflow: hidden;
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* תמונות הבגדים מוצגות בשקיפות חלקית לפני סימון */
+#clothesImages img {
+    float: right;
+    width: 19%;
+    height: auto;
+    margin-left: 1%;
+    opacity: 0.3;
+}
+
+/* אזור תמונות הנעליים */
+#shoesImages {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* תמונות הנעליים מוסתרות לפני בחירה */
+#shoesImages img {
+    position: absolute;
+    height: auto;
+    visibility: hidden;
+}
+
+/* מיקום Vans */
+#oldSkoolImage {
+    width: 340px;
+    top: -80px;
+    right: 135px;
+}
+
+/* מיקום Nike */
+#nikeSBImage {
+    width: 270px;
+    top: -85px;
+    right: 170px;
+}
+
+/* אזור תמונות האביזרים */
+#accessoriesImages {
+    overflow: hidden;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* תמונות האביזרים מוצגות בשקיפות חלקית לפני סימון */
+#accessoriesImages img {
+    float: right;
+    width: 32%;
+    height: auto;
+    margin-left: 1%;
+    opacity: 0.3;
+}
+
+/* הודעת האישור מתחת לכפתור */
+#result {
+    display: none;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #999999;
+    background-color: #f5f5f5;
+}
+
+/* הסבר קצר על השדות הנדרשים */
+#formHint {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* קריאות הסיכום */
+#result p {
+    line-height: 1.5;
+}
